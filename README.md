@@ -160,7 +160,7 @@ remove them.
  
 To help understanding, we present one filter examples in order to identify activities of hot-spot class instantiation, 
 the CookFrame identifies the Calls relationships between classes and methods from  example applications (Specific)  to 
-hot-spots (Framework). See the last rule in Table II. Let the method \textit{methA} of the example 
+hot-spots (Framework). See the last rule in Table II. Let the method methA of the example 
 class  X (Specific) have a static relationship Calls to the constructor of a hot-spot class Y (Framework). If calls 
 to both X.methA and Y.new are found in the execution trace, then the CookFrame checks the nesting level of the trace 
 to verify if this  example application class (Specific) was actually the one calling the hot-spot class at the execution 
