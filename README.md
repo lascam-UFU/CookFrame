@@ -57,9 +57,7 @@ instantiate the features into tables that organize the information for create th
 
 - **1- Trace:**
 
- *Repository File:* 
-   
- *File generated using:* TraceExtractor.
+ *Traces were generated using:* TraceExtractor.
  
  Here is an excerpt from a trace generated for the JHotDraw framework:
  
@@ -81,9 +79,7 @@ CH.ifa.draw.samples.javadraw.JavaDrawApp,createInitialDrawingView,3,1,1475605786
    
 - **2- RSF:**
 
- *Repository File:* 
-   
- *File generated using:* Java2RSF.
+  *RSF were generated using:* Java2RSF.
  
 "The RSF files contain information such as actual software artifacts (and are described below). Domain-model files specify the valid verbs for these token-level RSF files. An RSF triple can represent an arc between two nodes to the graph editor: 
 arcType startNodeName endNodeName. For example, using a domain model that has Function and Data type nodes interconnected by call and data access arcs, a token-level RSF stream then contains triples like:"
@@ -102,8 +98,7 @@ arcType startNodeName endNodeName. For example, using a domain model that has Fu
 - **4- Cookbook:** 
 
  *Repository File:* CookbookJHotDraw.rar
- 
- **This file presents the Cookbook generated for the JHotDraw 5.3 framework. This is composed of HTML pages and Download and click on
+  **This file presents the Cookbook generated for the JHotDraw 5.3 framework. This is composed of HTML pages and Download and click on
  the index.html to open the main Cookbook page that allows you to navigate through the document**
    
  *File generated using:* CookFrame_FilterRules and CookFrame. 
