@@ -156,7 +156,7 @@ remove them.
           
 ## Filter Example:
 
- ![Alt Text](https://github.com/lascam-UFU/CookFrame/blob/master/Metamodelo.png)
+ ![Alt Text](https://github.com/lascam-UFU/CookFrame/blob/master/RTInstanciacao7_4.PNG)
  
 To help understanding, we present one filter examples in order to identify activities of hot-spot class instantiation, 
 the CookFrame identifies the Calls relationships between classes and methods from  example applications (Specific)  to 
