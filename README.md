@@ -24,21 +24,6 @@ A substantial effort, in general, is required for understanding APIs of applicat
 3- Cookbook:
 
 
-GitService gitService = new GitServiceImpl();
-GitHistoryRefactoringMiner miner = new GitHistoryRefactoringMinerImpl();
 
-Repository repo = gitService.cloneIfNotExists(
-    "tmp/refactoring-toy-example",
-    "https://github.com/danilofes/refactoring-toy-example.git");
-
-miner.detectAll(repo, "master", new RefactoringHandler() {
-  @Override
-  public void handle(RevCommit commitData, List<Refactoring> refactorings) {
-    System.out.println("Refactorings at " + commitData.getId().getName());
-    for (Refactoring ref : refactorings) {
-      System.out.println(ref.toString());
-    }
-  }
-});
 
 
