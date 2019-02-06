@@ -160,12 +160,14 @@ remove them.
  
 To help understanding, we present one filter examples in order to identify activities of hot-spot class instantiation, 
 the CookFrame identifies the Calls relationships between classes and methods from  example applications (Specific)  to 
-hot-spots (Framework). See the last rule in Table~\ref{tab:Rules}. Let the method \textit{methA} of the example 
+hot-spots (Framework). See the last rule in Table II. Let the method \textit{methA} of the example 
 class  X (Specific) have a static relationship Calls to the constructor of a hot-spot class Y (Framework). If calls 
 to both X.methA and Y.new are found in the execution trace, then the CookFrame checks the nesting level of the trace 
 to verify if this  example application class (Specific) was actually the one calling the hot-spot class at the execution 
 of the feature. In such case, this class instantiation activities  is defined for inclusion in the recipe for the 
 respective feature.
+
+![Alt Text](https://github.com/lascam-UFU/CookFrame/blob/master/RTInstanciacao7_4.PNG)
 
 Figure 2 presents one example of hot-spot class instantiation. According to the RSF the JavaDrawApp example 
 application class (Specific) calls (Calls) the constructor (<init>) of the hot-spot 
@@ -173,7 +175,7 @@ class CreationTool (Framework), within the createTools method.  In the trace, Ja
 with its createTools method occurs in the ``Create New Figure'' feature. The constructor of CreationTool 
 class  also occurs in the trace of this feature. The CreationTool possesses nesting stack level 5 and the previous
 method call with stack level 4 is  JavaDrawApp.createTools, indicating that  CreationTool constructor is 
-called by the createTools method. Therefore, this \textit{CreationTool} class instantiation activity was selected 
+called by the createTools method. Therefore, this CreationTool class instantiation activity was selected 
 to be inserted into the ''Create New Figure'' recipe.
           
 
