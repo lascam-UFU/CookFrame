@@ -64,6 +64,16 @@ instantiate the features into tables that organize the information for create th
  *Repository File:* 
    
  *File generated using:* Java2RSF.
+ 
+"The RSF files contain information such as actual software artifacts (and are described below). Domain-model files specify the valid verbs for these token-level RSF files. An RSF triple can represent an arc between two nodes to the graph editor: 
+arcType startNodeName endNodeName. For example, using a domain model that has Function and Data type nodes interconnected by call and data access arcs, a token-level RSF stream then contains triples like:"
+
+ 
+    call    main          printf  
+    call    main          listcreate  
+    data    main          FILE  
+    data    listcreate    List  
+    ...
 
 - **3- Cookbook:** 
 
