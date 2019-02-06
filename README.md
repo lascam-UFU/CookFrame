@@ -154,7 +154,9 @@ remove them.
           
           
           
-## Filter Example:
+## Rules and Filter Example:
+
+![Alt Text](https://github.com/lascam-UFU/CookFrame/blob/master/Rules.PNG)
 
  ![Alt Text](https://github.com/lascam-UFU/CookFrame/blob/master/RTInstanciacao7_4.PNG)
  
@@ -167,7 +169,7 @@ to verify if this  example application class (Specific) was actually the one cal
 of the feature. In such case, this class instantiation activities  is defined for inclusion in the recipe for the 
 respective feature.
 
-![Alt Text](https://github.com/lascam-UFU/CookFrame/blob/master/Rules.PNG)
+
 
 Figure 2 presents one example of hot-spot class instantiation. According to the RSF the JavaDrawApp example 
 application class (Specific) calls (Calls) the constructor (<init>) of the hot-spot 
