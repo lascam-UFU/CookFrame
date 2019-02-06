@@ -35,7 +35,7 @@ types.
 
 *You can download it from:* https://users.encs.concordia.ca/~nikolaos/pattern_detection.html
    
-A design pattern detection tool (https://users.encs.concordia.ca/~nikolaos/pattern_detection.html), a static approach created by Tsantalis and colleagues  is used to obtain the design patterns related to the hot-spots.
+A design pattern detection tool (https://users.encs.concordia.ca/~nikolaos/pattern_detection.html) created by Tsantalis and colleagues  is used to obtain the design patterns related to the hot-spots.
 
 - **4- CookFrame:**
    
@@ -58,6 +58,24 @@ instantiate the features into tables that organize the information for create th
  *Repository File:* 
    
  *File generated using:* TraceExtractor.
+ 
+ Here is an excerpt from a trace generated for the JHotDraw framework:
+ 
+``` 
+CH.ifa.draw.samples.javadraw.JavaDrawApp,main,1,-1,1475605786231
+CH.ifa.draw.samples.javadraw.JavaDrawApp,<init>,2,1,1475605786331
+CH.ifa.draw.samples.javadraw.JavaDrawApp,setApplicationName,3,1,1475605786334
+CH.ifa.draw.samples.javadraw.JavaDrawApp,<init>,2,1,1475605786334
+CH.ifa.draw.contrib.MDIDesktopPane,<init>,3,2,1475605786397
+CH.ifa.draw.contrib.MDIDesktopManager,<init>,4,3,1475605786412
+CH.ifa.draw.samples.javadraw.JavaDrawApp,setDesktop,3,1,1475605786413
+CH.ifa.draw.samples.javadraw.JavaDrawApp,getDesktop,3,1,1475605786413
+CH.ifa.draw.samples.javadraw.JavaDrawApp,addInternalFrameListener,3,1,1475605786413
+CH.ifa.draw.samples.javadraw.JavaDrawApp,<init>,2,1,1475605786414
+CH.ifa.draw.samples.javadraw.JavaDrawApp,open,2,1,1475605786414
+CH.ifa.draw.samples.javadraw.JavaDrawApp,createInitialDrawingView,3,1,1475605786414
+
+```
    
 - **2- RSF:**
 
