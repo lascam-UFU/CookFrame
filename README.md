@@ -81,7 +81,47 @@ arcType startNodeName endNodeName. For example, using a domain model that has Fu
    
  *File generated using:* CookFrame_FilterRules and CookFrame. 
 
-A Cookbook is composed of several recipes, one for each desired feature of the instantiated application. The recipes are composed of actions for implementing the respective feature . There are four main activities organized within an index for each one of them: implementation of hot-spot interfaces; direct subclassing of hot-spot classes; creation of collaborations with hot-spot classes; indirect subclassing  of hot-spot classes by transitive inheritance. This information is complemented by actions that occur within methods, such as: a list of methods from the hot-spot class to invoke; a list of methods from the hot-spot class to override; and/or instantiation of hot-spot class; These actions and methods are enriched with documentation items about hot-spot classes or methods: signature of one class declaration example that uses the hotspot; code comments on the hot-spot or;  occurring design patterns; and, code examples of classes in existing instantiations that use those hot-spots classes or methods.
+A Cookbook is composed of several recipes, one for each desired feature of the instantiated application. The recipes are composed of
+actions for implementing the respective feature . There are four main activities organized within an index for each one of them:
+implementation of hot-spot interfaces; direct subclassing of hot-spot classes; creation of collaborations with hot-spot classes;
+indirect subclassing  of hot-spot classes by transitive inheritance. This information is complemented by actions that occur within
+methods, such as: a list of methods from the hot-spot class to invoke; a list of methods from the hot-spot class to override; and/or
+instantiation of hot-spot class; These actions and methods are enriched with documentation items about hot-spot classes or methods:
+signature of one class declaration example that uses the hotspot; code comments on the hot-spot or;  occurring design patterns; and,
+code examples of classes in existing instantiations that use those hot-spots classes or methods.
+
+Table I presents an excerpt of  the recipe **Remove a Figure**. This is a real recipe content of the JHotdraw framework
+(http://www.jhotdraw.org/), and  one of the features of this framework is the possibility to define a new type of geometric figure and
+remove them.
+
+*TABLE I: CONTENT OF RECIPE Remove Figure FOR THE SUBCLASSING ACTIVITY*
+
+          Activity: Extends StandardDrawing.
+          ---------------------------------------------------------------
+          | C)- C2) Activity and hot-spot:               | Extends StandardDrawing                                                  |
+          | E1) Signature of hot-spot class declaration: | public class StandardDrawing extends Composite-Figure implements Drawing |
+          | E2) Code comments (class):                   | The standard implementation of the Drawing interface. @see Drawing       |
+          | E3) Design Pattern (Class):                  |  Design Patterm: Observer                                                |
+          |                                              |  Subject: ch.ifa.draw.standard.StandardDrawing                           |
+          |                                              |  observers: Vector fListeners.                                           |
+          |                                              |  Attach(Observer):addDrawingChangeListener.                              |
+          |                                              |  Detach(Observer): removeDrawingChangeListener.                          |
+          |                                              |  Notify(): figureInvalidated, figureRequestUpdate                        |
+          |                                              |  Observer: ch.ifa.draw.framework.DrawingChangeListener                   |
+          |                                              |  Update(): drawingInvalidated, drawingRequestUpdate                      |
+          | D) - D1) Hotspot methods:                    |  remove(Figure figure)                                                   |
+          | E2) Comments (methods):                      | Removes the figure from the drawing and releases it.                     |
+          | E4) Usage examples (methods):                |  public synchronized Figure remove(Figure figure) {                      |
+          |                                              |         Figure f = super.remove(figure);                                 |
+          |                                              |              if (f instanceof AnimationDecorator)                        |
+          |                                              |                  return ((AnimationDecorator)                            |
+          |                                              |              f).peelDecoration();                                        |
+          |                                              |                   return f; }                                            |
+          
+          
+          
+
+          
 
 
 
