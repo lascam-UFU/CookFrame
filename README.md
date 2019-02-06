@@ -81,14 +81,15 @@ arcType startNodeName endNodeName. For example, using a domain model that has Fu
    
  *File generated using:* CookFrame_FilterRules and CookFrame. 
 
-A Cookbook is composed of several recipes, one for each desired feature of the instantiated application. The recipes are composed of
-actions for implementing the respective feature . There are four main activities organized within an index for each one of them:
-implementation of hot-spot interfaces; direct subclassing of hot-spot classes; creation of collaborations with hot-spot classes;
-indirect subclassing  of hot-spot classes by transitive inheritance. This information is complemented by actions that occur within
-methods, such as: a list of methods from the hot-spot class to invoke; a list of methods from the hot-spot class to override; and/or
-instantiation of hot-spot class; These actions and methods are enriched with documentation items about hot-spot classes or methods:
-signature of one class declaration example that uses the hotspot; code comments on the hot-spot or;  occurring design patterns; and,
-code examples of classes in existing instantiations that use those hot-spots classes or methods.
+A Cookbook is composed of several recipes (item B), one for each desired feature of the instantiated application. The recipes are
+composed of activities for implementing the respective feature (item C). There are four main activities organized within an index for
+each one of them: (C1) implementation of hot-spot interfaces; (C2) direct subclassing of hot-spot classes; (C3) creation of
+collaborations with hot-spot classes; (C4) indirect subclassing  of hot-spot classes by transitive inheritance.
+This information is complemented by activities that occur within methods (item D), such as: (D1)  a list of methods from the hot-spot
+class to invoke;  (D2) a list of methods from the hot-spot class to override; and/or (D3) instantiation of hot-spot class; These
+activities (C) and methods (D) are enriched with documentation items (item E) about hot-spot classes or methods: (E1) signature of one
+class declaration example that uses the hotspot; (E2) code comments on the hot-spot or;  (E3) occurring design patterns; and, (E4) code
+examples of classes in existing instantiations that use those hot-spots classes or methods
 
 Table I presents an excerpt of  the recipe **Remove a Figure**. This is a real recipe content of the JHotdraw framework
 (http://www.jhotdraw.org/), and  one of the features of this framework is the possibility to define a new type of geometric figure and
@@ -96,12 +97,16 @@ remove them.
 
 *TABLE I: CONTENT OF RECIPE Remove Figure FOR THE SUBCLASSING ACTIVITY*
 
-          Activity: Extends StandardDrawing.
+**Activity: Extends StandardDrawing.**
+
           | Type of Information                          |  Information
           |----------------------------------------------|--------------------------------------------------------------------------|
           | C)- C2) Activity and hot-spot:               | Extends StandardDrawing                                                  |
+          |----------------------------------------------|--------------------------------------------------------------------------|
           | E1) Signature of hot-spot class declaration: | public class StandardDrawing extends Composite-Figure implements Drawing |
+          |----------------------------------------------|--------------------------------------------------------------------------|
           | E2) Code comments (class):                   | The standard implementation of the Drawing interface. @see Drawing       |
+          |----------------------------------------------|--------------------------------------------------------------------------|
           | E3) Design Pattern (Class):                  |  Design Patterm: Observer                                                |
           |                                              |  Subject: ch.ifa.draw.standard.StandardDrawing                           |
           |                                              |  observers: Vector fListeners.                                           |
@@ -110,14 +115,18 @@ remove them.
           |                                              |  Notify(): figureInvalidated, figureRequestUpdate                        |
           |                                              |  Observer: ch.ifa.draw.framework.DrawingChangeListener                   |
           |                                              |  Update(): drawingInvalidated, drawingRequestUpdate                      |
+          |----------------------------------------------|--------------------------------------------------------------------------|
           | D) - D1) Hotspot methods:                    |  remove(Figure figure)                                                   |
+          |----------------------------------------------|--------------------------------------------------------------------------|
           | E2) Comments (methods):                      | Removes the figure from the drawing and releases it.                     |
+          |----------------------------------------------|--------------------------------------------------------------------------|
           | E4) Usage examples (methods):                |  public synchronized Figure remove(Figure figure) {                      |
           |                                              |         Figure f = super.remove(figure);                                 |
           |                                              |              if (f instanceof AnimationDecorator)                        |
           |                                              |                  return ((AnimationDecorator)                            |
           |                                              |              f).peelDecoration();                                        |
           |                                              |                   return f; }                                            |
+          |----------------------------------------------|--------------------------------------------------------------------------|
           
           
           
