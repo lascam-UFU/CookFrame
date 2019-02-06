@@ -10,12 +10,14 @@ A substantial effort, in general, is required for understanding APIs of applicat
  *Repository File:* TraceExtractor.rar 
  
  *Output:* Traces
-
+ 
  We use the TraceExtractor to apply feature location technique based on dynamic analysis where execution traces are used to
  locate the sets of code elements implementing the features of interest in existing applications. These traces are extracted
  during the execution of a scenario that represents adequately the feature. The only need is to know the applications features
- and know how to execute them. A "start" and "end" markings of a feature execution enable the slicing of the differentiation 
- of traces for features.
+ and know how to execute them. A "start" and "end" markings of a feature execution enable the slicing of the differentiation
+ of traces for features. During  the  extraction  process,  trace  files  for  eachtriggered  thread  are  generated.  A  method  call
+ event  datacontains  the  fully  qualified  method  name,  the  system  timeof the call entry, the stack level of the call, and the
+ identifierof the associated object or class. 
    
     
 - **2- Java2RSF:**
@@ -92,8 +94,12 @@ arcType startNodeName endNodeName. For example, using a domain model that has Fu
     data    main          FILE  
     data    listcreate    List  
     ...
+    
+- **3- Design Patterns:**    
+    
+ *You can  find one example of output here:* https://users.encs.concordia.ca/~nikolaos/pattern_detection.html
 
-- **3- Cookbook:** 
+- **4- Cookbook:** 
 
  *Repository File:* CookbookJHotDraw.rar
  
