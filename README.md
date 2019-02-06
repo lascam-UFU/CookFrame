@@ -97,7 +97,8 @@ remove them.
 *TABLE I: CONTENT OF RECIPE Remove Figure FOR THE SUBCLASSING ACTIVITY*
 
           Activity: Extends StandardDrawing.
-          ---------------------------------------------------------------
+          | Type of Information                          |  Information
+          |----------------------------------------------|--------------------------------------------------------------------------|
           | C)- C2) Activity and hot-spot:               | Extends StandardDrawing                                                  |
           | E1) Signature of hot-spot class declaration: | public class StandardDrawing extends Composite-Figure implements Drawing |
           | E2) Code comments (class):                   | The standard implementation of the Drawing interface. @see Drawing       |
