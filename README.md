@@ -105,15 +105,15 @@ arcType startNodeName endNodeName. For example, using a domain model that has Fu
  
  ![Alt Text](https://github.com/lascam-UFU/CookFrame/blob/master/Metamodelo.png)
 
-A Cookbook is composed of several recipes (item B), one for each desired feature of the instantiated application. The recipes are
-composed of activities for implementing the respective feature (item C). There are four main activities organized within an index for
-each one of them: (C1) implementation of hot-spot interfaces; (C2) direct subclassing of hot-spot classes; (C3) creation of
-collaborations with hot-spot classes; (C4) indirect subclassing  of hot-spot classes by transitive inheritance.
+A Cookbook (as shown in Figure 1) is composed of several recipes (item B), one for each desired feature of the instantiated
+applications.The recipes are composed of activities for implementing the respective feature (item C). There are four main activities
+organized within an index for each one of them: (C1) implementation of hot-spot interfaces; (C2) direct subclassing of hot-spot classes;
+(C3) creation of collaborations with hot-spot classes; (C4) indirect subclassing  of hot-spot classes by transitive inheritance.
 This information is complemented by activities that occur within methods (item D), such as: (D1)  a list of methods from the hot-spot
 class to invoke;  (D2) a list of methods from the hot-spot class to override; and/or (D3) instantiation of hot-spot class; These
 activities (C) and methods (D) are enriched with documentation items (item E) about hot-spot classes or methods: (E1) signature of one
 class declaration example that uses the hotspot; (E2) code comments on the hot-spot or;  (E3) occurring design patterns; and, (E4) code
-examples of classes in existing instantiations that use those hot-spots classes or methods
+examples of classes in existing instantiations that use those hot-spots classes or methods.
 
 Table I presents an excerpt of  the recipe **Remove a Figure**. This is a real recipe content of the JHotdraw framework
 (http://www.jhotdraw.org/), and  one of the features of this framework is the possibility to define a new type of geometric figure and
@@ -154,7 +154,27 @@ remove them.
           
           
           
+## Filter Example:
 
+ ![Alt Text](https://github.com/lascam-UFU/CookFrame/blob/master/Metamodelo.png)
+ 
+To help understanding, we present one filter examples in order to identify activities of hot-spot class instantiation, 
+the CookFrame identifies the Calls relationships between classes and methods from  example applications (Specific)  to 
+hot-spots (Framework). See the last rule in Table~\ref{tab:Rules}. Let the method \textit{methA} of the example 
+class  X (Specific) have a static relationship Calls to the constructor of a hot-spot class Y (Framework). If calls 
+to both X.methA and Y.new are found in the execution trace, then the CookFrame checks the nesting level of the trace 
+to verify if this  example application class (Specific) was actually the one calling the hot-spot class at the execution 
+of the feature. In such case, this class instantiation activities  is defined for inclusion in the recipe for the 
+respective feature.
+
+Figure 2 presents one example of hot-spot class instantiation. According to the RSF the \textit{JavaDrawApp}  example 
+application class (Specific) calls (Calls) the constructor (<init>) of the hot-spot 
+class CreationTool (Framework), within the createTools method.  In the trace, JavaDrawApp 
+with its createTools method occurs in the ``Create New Figure'' feature. The constructor of CreationTool 
+class  also occurs in the trace of this feature. The CreationTool possesses nesting stack level 5 and the previous
+method call with stack level 4 is  JavaDrawApp.createTools, indicating that  CreationTool constructor is 
+called by the createTools method. Therefore, this \textit{CreationTool} class instantiation activity was selected 
+to be inserted into the ''Create New Figure'' recipe.
           
 
 
