@@ -102,6 +102,8 @@ arcType startNodeName endNodeName. For example, using a domain model that has Fu
  the index.html to open the main Cookbook page that allows you to navigate through the document**
    
  *File generated using:* CookFrame_FilterRules and CookFrame. 
+ 
+ ![Alt Text]()
 
 A Cookbook is composed of several recipes (item B), one for each desired feature of the instantiated application. The recipes are
 composed of activities for implementing the respective feature (item C). There are four main activities organized within an index for
