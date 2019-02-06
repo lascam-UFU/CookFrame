@@ -7,11 +7,11 @@ A substantial effort, in general, is required for understanding APIs of applicat
 
 1 - TraceExtractor:
  Repository File: TraceExtractor.rar 
-    
-    We use the TraceExtractor to apply feature location technique based on dynamic analysis where execution traces are used to locate
-    the sets of code elements implementing the features of interest in existing applications. These traces are extracted during the
-    execution of a scenario that represents adequately the feature. The only need is to know the applications features and know how to
-    execute them. A "start" and "end" markings of a feature execution enable the slicing of the differentiation of traces for features
+        We use the TraceExtractor to apply feature location technique based on dynamic analysis where execution traces are used to
+        locate the sets of code elements implementing the features of interest in existing applications. These traces are extracted
+        during the execution of a scenario that represents adequately the feature. The only need is to know the applications features
+        and know how to execute them. A "start" and "end" markings of a feature execution enable the slicing of the differentiation 
+        of traces for features
    
     
 2- Java2RSF:
