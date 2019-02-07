@@ -172,7 +172,7 @@ respective feature.
 
 
 Figure 2 presents one example of hot-spot class instantiation. According to the RSF the JavaDrawApp example 
-application class (Specific) calls (Calls) the constructor (<init>) of the hot-spot 
+application class (Specific) calls (Calls) the constructor (init) of the hot-spot 
 class CreationTool (Framework), within the createTools method.  In the trace, JavaDrawApp 
 with its createTools method occurs in the ``Create New Figure'' feature. The constructor of CreationTool 
 class  also occurs in the trace of this feature. The CreationTool possesses nesting stack level 5 and the previous
