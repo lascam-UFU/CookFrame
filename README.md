@@ -37,7 +37,7 @@ types.
 
 *You can download it from:* https://users.encs.concordia.ca/~nikolaos/pattern_detection.html
    
-A design pattern detection tool (https://users.encs.concordia.ca/~nikolaos/pattern_detection.html) created by Tsantalis and colleagues  is used to obtain the design patterns related to the hot-spots.
+A design pattern detection tool (https://users.encs.concordia.ca/~nikolaos/pattern_detection.html) is used to obtain the design patterns related to the hot-spots.
 
 - **4- CookFrame:**
    
